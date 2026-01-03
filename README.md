@@ -4,7 +4,6 @@ SecureChain is a Java-based digital evidence preservation system developed durin
 
 The system simulates real-world chain-of-custody workflows commonly used in cybersecurity, digital forensics, and legal investigations, enabling reliable tamper detection and evidence validation.
 
----
 
 ## Key Objectives
 
@@ -13,7 +12,6 @@ The system simulates real-world chain-of-custody workflows commonly used in cybe
 * Simulate forensic chain-of-custody workflows
 * Provide secure access through authentication mechanisms
 
----
 
 ## System Overview
 
