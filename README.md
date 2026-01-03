@@ -69,6 +69,25 @@ When a file is re-uploaded for verification, the system recalculates its hash an
 
 
 
+## Project Screenshots
+
+### Main Landing Page
+![Main Landing Page](screenshots/Main%20Landing%20Page.png)
+
+### User Registration
+![User Registration](screenshots/User%20Registration%20Page.png)
+
+### User Login
+![User Login](screenshots/User%20Login%20Page.png)
+
+### User Dashboard
+![User Dashboard](screenshots/User%20Dashboard.png)
+
+### Evidence Records
+![Evidence Records](screenshots/Evidence%20Records.png)
+
+
+
 ## How to Run the Project
 
 ### Database Setup
