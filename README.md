@@ -5,12 +5,14 @@ SecureChain is a Java-based digital evidence preservation system developed durin
 The system simulates real-world chain-of-custody workflows commonly used in cybersecurity, digital forensics, and legal investigations, enabling reliable tamper detection and evidence validation.
 
 
+
 ## Key Objectives
 
 * Preserve the integrity of digital evidence
 * Detect tampering using cryptographic hash comparison
 * Simulate forensic chain-of-custody workflows
 * Provide secure access through authentication mechanisms
+
 
 
 ## System Overview
@@ -20,7 +22,7 @@ Each uploaded file is processed using the SHA-256 hashing algorithm, and the gen
 
 When a file is re-uploaded for verification, the system recalculates its hash and compares it with the stored value to determine whether the evidence has been altered.
 
----
+
 
 ## Technology Stack
 
@@ -30,7 +32,7 @@ When a file is re-uploaded for verification, the system recalculates its hash an
 * Server: Apache Tomcat
 * Database Connectivity: JDBC (MySQL Connector/J)
 
----
+
 
 ## Core Features
 
@@ -55,7 +57,7 @@ When a file is re-uploaded for verification, the system recalculates its hash an
   * TAMPERED – Hash mismatch detected
   * NOT FOUND – No existing hash record available
 
----
+
 
 ## System Architecture
 
@@ -65,7 +67,7 @@ When a file is re-uploaded for verification, the system recalculates its hash an
 * Integrity Verification Module
 * MySQL-backed Metadata Storage
 
----
+
 
 ## How to Run the Project
 
@@ -97,7 +99,7 @@ src/main/java/com/securechain/util/DBConnection.java
 http://localhost:8080/Secure_Chain/
 ```
 
----
+
 
 ## Future Enhancements
 
@@ -106,14 +108,14 @@ http://localhost:8080/Secure_Chain/
 * Timestamped evidence logging
 * Audit trail visualization
 
----
+
 
 ## Author
 
 Diya Kharb
 Developed during IBM Internship with a focus on security architecture, cryptographic hashing, and backend implementation.
 
----
+
 
 ## Disclaimer
 
