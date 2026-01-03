@@ -1,77 +1,122 @@
 SecureChain – Digital Evidence Integrity & Chain-of-Custody System
-SecureChain is a Java-based digital evidence preservation system developed during an IBM Internship, designed to ensure the integrity, authenticity, and verifiability of digital evidence using cryptographic hashing techniques.
-The system simulates real-world chain-of-custody workflows commonly used in cybersecurity, digital forensics, and legal investigations, enabling tamper detection and secure evidence validation.
 
-Key Objectives
-- Preserve integrity of digital evidence
-- Detect tampering using cryptographic hashes
-- Simulate forensic chain-of-custody workflows
-- Provide secure access through authentication
+SecureChain is a Java-based digital evidence preservation system developed during an IBM Internship. The project is designed to ensure the integrity, authenticity, and verifiability of digital evidence using cryptographic hashing techniques.
 
-System Overview
-SecureChain allows authenticated users to upload digital evidence files. Each file is processed using the SHA-256 hashing algorithm, and its hash is stored as a permanent integrity record. When a file is re-uploaded, the system verifies whether the evidence remains unchanged.
+The system simulates real-world chain-of-custody workflows commonly used in cybersecurity, digital forensics, and legal investigations, enabling reliable tamper detection and evidence validation.
 
-Technology Stack
-- Backend: Java Servlets, java.security.MessageDigest
-- Frontend: JSP, HTML, CSS, JavaScript
-- Database: MySQL
-- Server: Apache Tomcat
-- Database Connectivity: JDBC (MySQL Connector/J)
+---
 
+## Key Objectives
 
-Core Features
-1. Secure Authentication
-- User registration and login
-- Passwords securely stored using SHA-256 hashing
-  
-2. Evidence Upload
-- Authenticated users can upload digital evidence
-- Files are stored securely on the server
-- SHA-256 hash generated using HashUtil.java
-- Hash records stored for future verification
+* Preserve the integrity of digital evidence
+* Detect tampering using cryptographic hash comparison
+* Simulate forensic chain-of-custody workflows
+* Provide secure access through authentication mechanisms
 
-3. Evidence Verification
-- Re-upload an evidence file to validate integrity
-- Verification results:
-  VERIFIED – File remains unchanged
-  TAMPERED – Hash mismatch detected
-  NOT FOUND – No existing hash record
+---
 
-System Architecture
-- Authentication Layer
-- Secure File Upload Module
-- SHA-256 Hashing Engine
-- Integrity Verification Module
-- MySQL-backed Metadata Storage
+## System Overview
 
-How to Run the Project
-1. Database Setup
-- Ensure MySQL server is running
-- Create a database named securechaindb
-- Import securechaindb.sql to create required tables
-  
-2. Server Setup
-- Deploy the project on Apache Tomcat
-- Add MySQL Connector/J (.jar) to apache-tomcat/lib/
+SecureChain allows authenticated users to upload digital evidence files.
+Each uploaded file is processed using the SHA-256 hashing algorithm, and the generated hash is stored as a permanent integrity record.
 
-3. Configuration
-- Update database credentials in:
-- src/main/java/com/securechain/util/DBConnection.java
+When a file is re-uploaded for verification, the system recalculates its hash and compares it with the stored value to determine whether the evidence has been altered.
 
-4. Run the Application
-- Start Tomcat server
-- Access the application at:
-- http://localhost:8080/Secure_Chain/
+---
 
-Future Enhancements
-- Blockchain-based immutable hash ledger
-- Role-Based Access Control (RBAC)
-- Timestamped evidence logging
-- Audit trail visualization
+## Technology Stack
 
+* Backend: Java Servlets, java.security.MessageDigest
+* Frontend: JavaServer Pages (JSP), HTML, CSS, JavaScript
+* Database: MySQL
+* Server: Apache Tomcat
+* Database Connectivity: JDBC (MySQL Connector/J)
 
-Author- Diya Kharb
-Developed during IBM Internship with focus on security architecture, cryptographic hashing, and backend implementation.
+---
 
-Disclaimer
+## Core Features
+
+### Secure Authentication
+
+* User registration and login functionality
+* Passwords stored securely using SHA-256 hashing
+
+### Evidence Upload
+
+* Authenticated users can upload digital evidence files
+* Files are stored securely on the server
+* SHA-256 hash generated using HashUtil.java
+* Hash records maintained for future verification
+
+### Evidence Verification
+
+* Users can re-upload files to verify integrity
+* Verification outcomes:
+
+  * VERIFIED – File integrity preserved
+  * TAMPERED – Hash mismatch detected
+  * NOT FOUND – No existing hash record available
+
+---
+
+## System Architecture
+
+* Authentication Layer
+* Secure File Upload Module
+* SHA-256 Hashing Engine
+* Integrity Verification Module
+* MySQL-backed Metadata Storage
+
+---
+
+## How to Run the Project
+
+### Database Setup
+
+* Ensure MySQL server is running
+* Create a database named `securechaindb`
+* Import the `securechaindb.sql` file to create required tables
+
+### Server Setup
+
+* Deploy the project on an Apache Tomcat server
+* Add MySQL Connector/J (.jar file) to the Tomcat `lib` directory
+
+### Configuration
+
+Update database credentials in:
+
+```
+src/main/java/com/securechain/util/DBConnection.java
+```
+
+### Run
+
+* Start the Tomcat server
+* Access the application at:
+
+```
+http://localhost:8080/Secure_Chain/
+```
+
+---
+
+## Future Enhancements
+
+* Blockchain-based immutable hash ledger
+* Role-based access control (RBAC)
+* Timestamped evidence logging
+* Audit trail visualization
+
+---
+
+## Author
+
+Diya Kharb
+Developed during IBM Internship with a focus on security architecture, cryptographic hashing, and backend implementation.
+
+---
+
+## Disclaimer
+
 This project is intended for educational and academic purposes and demonstrates secure digital evidence handling concepts.
